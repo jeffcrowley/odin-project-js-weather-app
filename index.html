@@ -15,20 +15,28 @@
       <main class="container" id="content">
         <div class="section">
           <h1 class="center-align">JS Weather App</h1>
-          <h5 class="center-align">A simple app testing my knowledge of Async/Await, APIs, JSON, etc.</h5>
+          <h5 class="center-align">A simple app testing basic knowledge of Asynchronous JS, Promises, APIs, JSON, etc.</h5>
         </div>
         <div class="section">
-          <div class="row">
-            <div class="col s12">
-              <div class="row">
-                <div class="input-field col s3 right-align">
-                  <input type="text" placeholder="Enter 5 Digit ZIP" id="zip-input" class="validate">
-                  <label for="zip-input">ZIP Code</label>
-                </div>
-                <div class="col s3">
-                  <button class="btn waves-effect waves-light btn-large" type="submit" name="action" id="zip-submit">Get Weather</button>
+          <form action="">
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s3 right-align">
+                    <input type="text" placeholder="Enter 5 Digit ZIP" id="zip-input" class="validate" pattern="[0-9]{5}" required="required" title="5 digit ZIP code">
+                    <label for="zip-input">ZIP Code</label>
+                  </div>
+                  <div class="col s3">
+                    <button class="btn waves-effect waves-light btn-large" type="submit" name="action" id="zip-submit">Get Weather</button>
+                  </div>
                 </div>
               </div>
+            </div>
+          </form>
+        </div>
+        <div class="section" id="weatherSection">
+          <div class="row" id="weatherSectionRow">
+            <div class="col s12 m6 center-align" id="weatherSectionCol"></div>
             </div>
           </div>
         </div>
